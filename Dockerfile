@@ -18,6 +18,8 @@ COPY --from=builder /app/node_modules /app/node_modules
 
 COPY . .
 
+ENV PORT=7000
+
 EXPOSE 7000
 
 ENTRYPOINT [ "node", "/app/server.js" ]
